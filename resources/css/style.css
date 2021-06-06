@@ -1,0 +1,491 @@
+/*========================================
+1.Template Name : ALLABA.
+2.Template URI :
+3.Descripation : An awesome ALLABA template .
+4.Author Name : MD AL AMIN.
+5.Author URI : https://alamindeveloper.com.
+6.Support : https://alamindeveloper.com
+7.verson :1.0
+
+=========================================*/
+
+/*====================================
+
+            INDEX CSS
+            =========
+
+1. Common css
+2. Header
+3. Home
+4. About
+5. Project
+6. Team
+7. Contact
+8. Footer
+
+=====================================*/
+
+
+
+
+/*====================================
+1. Common css
+=====================================*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;0,900;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #fffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 10px;
+}
+h1,h2,h3,h4,h6{
+    
+    font-size: 200%;
+}
+p{
+    color: #757575;
+    font-size: 140%;
+    letter-spacing: .5px;
+}
+#about,#team,
+#contact,footer{
+    background: #fff;
+}
+.bg{
+    background: transparent;
+    transition: .5s ease;
+}
+.bg.scrolled {
+    background: #4dc47d;
+    height: 80px;
+}
+
+
+
+
+
+/*=======================
+BUTTON
+=======================*/
+.section-btn{
+    margin: 45px 0 0 0;
+}
+.section-btn a{
+    color: #fff;
+    line-height: 45px;
+    font-size: 200%;
+    text-decoration: none;
+    perspective: 1000px;
+}
+.section-btn a span{
+    position: relative;
+    display: inline-block;
+    letter-spacing: .5px;
+    padding: 2px 27px;
+    background: #4dc47d;
+    border-radius: 2px;
+    transition: transform 0.3s;
+    transform-origin: 50% 0;
+    transform-style: preserve-3d;
+}
+
+.section-btn a span::before{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #34656d;
+    border-radius: 2px;
+    padding: 2px 27px;
+    transition: background 0.3s;
+    transform: rotateX(-90deg);
+    content: attr(data-hover);
+    transform-origin: 50% 0;
+}
+.section-btn a:hover span,
+.section-btn a:focus span{
+    transform: rotateX(90deg) translateY(-22px);
+}
+
+
+
+/*====================
+2. Header
+====================*/
+header.navbar{
+    color: #fff;
+}
+header.navbar:hover{
+    color: #fff;
+}
+
+.navbar-light .navbar-brand {
+    color: #fff;
+    font-size: 240%;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.navbar-light .navbar-brand:hover{
+    color: #fff;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 150%;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: all ease-in 0.5s;
+}
+.navbar-light .navbar-nav:hover .nav-link {
+    color: #fff;
+}
+
+
+.navbar-light .navbar-nav .nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: transparent;
+    transition: width 0.3s ease,background-color 0.3s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover::after{
+    width: 100%;
+    background: #4dc47d;
+    color: #4dc47d;
+}
+/*====================
+3.Home
+=====================*/
+
+#home{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 100vh;
+   
+}
+
+#home video{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%)translateY(-50%);
+    background-size: cover;
+    object-fit: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    z-index: -100;
+
+}
+#home .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height:100%;
+    background: rgba(46, 81, 95, 0.63);
+}
+#home .home-text{
+    z-index: 99;
+}
+#home .home-text h1{
+    color: #fff;
+    font-size: 450%;
+    font-weight: 700;
+    letter-spacing: .5px;
+
+}
+#home .home-text p {
+    color: #fff;
+    font-size: 180%;
+    letter-spacing: .5px;
+}
+.navbar-light .navbar-toggler {
+    border: 4px solid #4dc47d;
+}
+i.fas.fa-bars.text-light {
+    font-size: 180%;
+}
+
+/*===================
+4.About
+====================*/
+
+.about-text.m-auto.text-center h3 {
+    font-size:140%;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    color: #474747;
+}
+.about-text.m-auto.text-center p {
+    font-size: 300%;
+}
+/*==========================
+5. Project
+==========================*/
+#project{
+    background: #ebebeb;
+}
+#project .project-item img{
+    width: 100%;
+    height: 350px;
+    transition: all ease-in-out 0.4s;
+}
+#project .project-item:hover img{
+    transform: scale(1.1);
+}
+#project .project-item{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25Px;
+    padding: 0;
+    vertical-align: middle;
+    text-align: center;
+}
+#project .project-item .project-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all ease-in-out 0.4s;
+}
+#project .project-item:hover .project-overlay{
+    opacity: 1;
+}
+#project .project-item .project-overlay .project-info{
+    padding: 135px 0;
+}
+.project-info h2{
+    color: #fff;
+    margin: 0;
+    font-size: 380%;
+}
+.project-info h3{
+    color: #fff;
+    margin-top: 10px;
+    font-size: 140%;
+    letter-spacing: 0.5px;
+
+}
+/*============================
+6. Team
+=============================*/
+h2.text-center.team-text {
+    font-size: 320%;
+    font-weight: 700;
+    color: #5b5b5b;
+    letter-spacing: .5px;
+}
+h2.text-center.team-text::after{
+    content: "";
+    display: block;
+    width: 8%;
+    height: 3px;
+    background-color: #4dc47d;
+    margin: auto;
+    margin-top: 6px;
+    border-radius: 30px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-top: 40px;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .tm-text h3{
+      padding-top: 10px;
+      font-size: 100%;
+      font-weight: 600;
+      color: #757575;
+    }
+
+
+  .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 240%;
+    font-weight: 700;
+    color: #4dc47d;
+    margin-top: -40px;
+    }
+    .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    content: 'prev';
+    font-size: 240%;
+    font-weight: 700;
+    color: #4dc47d;
+    margin-top: -40px;
+    }
+
+    .tm-text span{
+        color: #474747;
+        font-size: 120%;
+    }
+
+
+/*=======================
+7. Contact
+========================*/
+#contact{
+    background:url("img/contactimg.jpg") 50% 0 repeat-y fixed;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+h2.contact-text{
+    font-size: 320%;
+    font-weight: 700;
+    color: #5b5b5b;
+    letter-spacing: .5px;
+}
+h2.contact-text::after{
+    content: "";
+    display: block;
+    width: 5%;
+    height: 3px;
+    background-color: #4dc47d;
+    margin: auto;
+    margin-top: 6px;
+    border-radius: 30px;
+    padding-bottom: 3.5px;
+}
+#contact .form-control{
+    border:none;
+    box-shadow: none;
+    font-size: 180%;
+    margin-bottom: 20px;
+}
+
+#contact .form-control:focus {
+    border-color: #d9d9d9;
+}
+#contact input{
+    height: 55px;
+    line-height: 45px;
+}
+
+/*========================
+8. Footer
+========================*/
+
+.footer h2 {
+    font-size: 250%;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: #686868;
+    text-transform: uppercase;
+}
+
+.footer p{
+    line-height: 26px;
+    font-size: 160%;
+}
+.footer-info p {
+    text-decoration: none;
+    line-height: 10px;
+    margin-top: 16px;
+    
+}
+
+.footer-info p a{
+    color: #686868;
+}
+.social-icon{
+    font-size: 250%;
+   
+}
+.social-icon li a i{
+    color: #686868;
+    transition: .5s;
+}
+.social-icon li a:hover i{
+    color: #4dc47d;
+}
+.footer-info p a {
+    color: #686868;
+    text-decoration: none;
+}
+
+.copyright{
+    background-color: #4dc47d;
+}
+.copyright-text p{
+    color: #fff;
+    font-size: 160%;
+}
+
+.copyright-text a{
+    color: #575757cc;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/*==================
+Scroll Top up
+==================*/
+.scrollTop{
+    width: 45px;
+    height: 45px;
+    background-color: #34656d;
+    position: fixed;
+    bottom: 800px;
+    right: 80px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 24px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+  }
+  .scrollTop i{
+    color: #fff;
+    line-height: 45px;
+  }
+
+  .scrollActive {
+    visibility: visible;
+    opacity: 1;
+    bottom: 80px;
+    transition: 1s;
+    
+  }
